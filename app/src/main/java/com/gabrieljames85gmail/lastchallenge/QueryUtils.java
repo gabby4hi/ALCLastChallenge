@@ -47,7 +47,7 @@ public final class QueryUtils {
                 JSONObject currentposition = objlag.getJSONObject(i);
                 String name = currentposition.getString("login");
                 String avatar = currentposition.getString("avatar_url");
-                String profile = currentposition.getString("url");
+                String profile = currentposition.getString("html_url");
 
                 Lads lad = new Lads(avatar, name , profile);
                 javalags.add(lad);

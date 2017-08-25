@@ -19,6 +19,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
 public class MainActivity extends AppCompatActivity {
     public static final String LOG_TAG = MainActivity.class.getName();
     public static final String Lagos_Java_Url = "https://api.github.com/search/users?q=location:%22lagos%22+language:%22java%22";
@@ -33,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Roboto-RobotoRegular.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
 
 
         LagosJavaTask javaFriends = new LagosJavaTask();

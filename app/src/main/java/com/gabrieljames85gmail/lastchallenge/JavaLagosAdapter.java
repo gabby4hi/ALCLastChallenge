@@ -1,6 +1,7 @@
 package com.gabrieljames85gmail.lastchallenge;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -48,16 +49,20 @@ public class JavaLagosAdapter extends ArrayAdapter<Lads> {
         }
 
        ImageView imageView = (ImageView)listingview.findViewById(R.id.profile_pic);
-        Picasso.with(getContext()).load(lad.getmPics()).resize(50, 50).into(imageView);
+        Picasso.with(getContext()).load(lad.getmPics()).transform(new RoundedTransformation(50, 50)).fit().centerCrop().into(imageView);
 
         TextView firstName =(TextView)listingview.findViewById(R.id.first_name);
         firstName.setText(lad.getmFirstName());
+
+
+
 
 
         return listingview;
 
         //return super.getView(position, convertView, parent);
     }
+
 
 
 }

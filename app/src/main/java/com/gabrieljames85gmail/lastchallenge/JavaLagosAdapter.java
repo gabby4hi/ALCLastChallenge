@@ -30,7 +30,7 @@ import static com.gabrieljames85gmail.lastchallenge.MainActivity.LOG_TAG;
 
 public class JavaLagosAdapter extends ArrayAdapter<Lads> {
 
-   private Context context;
+    private Context context;
 
     public JavaLagosAdapter(Context context, List<Lads> object) {
 
@@ -48,10 +48,10 @@ public class JavaLagosAdapter extends ArrayAdapter<Lads> {
             listingview = LayoutInflater.from(getContext()).inflate(R.layout.java_lag, parent, false);
         }
 
-       ImageView imageView = (ImageView)listingview.findViewById(R.id.profile_pic);
-        Picasso.with(getContext()).load(lad.getmPics()).transform(new RoundedTransformation(50, 50)).fit().centerCrop().into(imageView);
+        ImageView imageView = listingview.findViewById(R.id.profile_pic);
+        Picasso.with(getContext()).load(lad.getmPics()).transform(new RoundedTransformation(100, 50)).fit().centerCrop().into(imageView);
 
-        TextView firstName =(TextView)listingview.findViewById(R.id.first_name);
+        TextView firstName = listingview.findViewById(R.id.first_name);
         firstName.setText(lad.getmFirstName());
 
 

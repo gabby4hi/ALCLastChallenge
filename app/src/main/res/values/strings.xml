@@ -2,4 +2,6 @@
     <string name="app_name">LastChallenge</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="erro_text">"A Strong Network Connection is Needed "</string>
+
 </resources>

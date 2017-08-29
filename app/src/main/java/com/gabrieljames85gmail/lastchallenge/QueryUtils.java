@@ -18,13 +18,16 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.gabrieljames85gmail.lastchallenge.MainActivity.LOG_TAG;
+import static com.gabrieljames85gmail.lastchallenge.MainActivity.LOG_TAGS;
+
 
 /**
  * Created by OSAJI GABRIEL on 23/08/2017.
  */
 
 public final class QueryUtils {
+
+
 
     private QueryUtils(){
 
@@ -53,7 +56,7 @@ public final class QueryUtils {
                 javalags.add(lad);
             }
         } catch (JSONException e) {
-            Log.e(LOG_TAG, "Not able to receive data from github..", e);
+            Log.e(LOG_TAGS, "Not able to receive data from github..", e);
         }
 
         return javalags;
@@ -65,7 +68,7 @@ public final class QueryUtils {
         try {
             urls    = new URL(url);
         } catch (MalformedURLException e) {
-            Log.e(LOG_TAG, "Problem Creating a Url from this String ..", e );
+            Log.e(LOG_TAGS, "Problem Creating a Url from this String ..", e );
         }
 
         return urls;
@@ -97,23 +100,23 @@ public final class QueryUtils {
         InputStream inputStream = null;
 
         try {
-          urlConnection = (HttpURLConnection)url.openConnection();
-          urlConnection.setReadTimeout(10000);
-          urlConnection.setConnectTimeout(20000);
-          urlConnection.setRequestMethod("GET");
-          urlConnection.connect();
+            urlConnection = (HttpURLConnection)url.openConnection();
+            urlConnection.setReadTimeout(10000);
+            urlConnection.setConnectTimeout(20000);
+            urlConnection.setRequestMethod("GET");
+            urlConnection.connect();
 
-                 if (urlConnection.getResponseCode()== 200){
-                     inputStream = urlConnection.getInputStream();
-                     JsonResponce = readFromStream(inputStream);
-                 }
+            if (urlConnection.getResponseCode()== 200){
+                inputStream = urlConnection.getInputStream();
+                JsonResponce = readFromStream(inputStream);
+            }
 
-            } catch (IOException e) {
-                    Log.e(LOG_TAG, "Problem Converting to Http", e);
+        } catch (IOException e) {
+            Log.e(LOG_TAGS, "Problem Getting Good Connection  ", e);
 
-                    }
+        }
 
-             return  JsonResponce;
+        return  JsonResponce;
     }
 
 
@@ -126,7 +129,7 @@ public final class QueryUtils {
             JsonResponsed = makeHttpRequest(url);
         }
         catch (IOException e){
-            Log.e(LOG_TAG, " Problem Try to make HttpReques......", e);
+            Log.e(LOG_TAGS, " Problem Try to make HttpReques......", e);
         }
 
         ArrayList<Lads> JavaLags = extractfromJson(JsonResponsed);

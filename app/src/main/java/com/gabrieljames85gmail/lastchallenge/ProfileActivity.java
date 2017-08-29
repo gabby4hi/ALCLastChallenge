@@ -62,7 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                String shareBody = "\" Check out this Awesome Developer @github\"+ name + \", \" + profileUrl";
+                String shareBody = " Check out this Awesome Developer   " + "\n " + "Name: " + name +  "\n" + "@gitHub  " + profileUrl;
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Meet This world Class Awesome Java Developer....");
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 startActivity(shareIntent);
@@ -70,6 +70,16 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         gitConnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse(profileUrl));
+                startActivity(intent);
+            }
+        });
+
+        gitLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);

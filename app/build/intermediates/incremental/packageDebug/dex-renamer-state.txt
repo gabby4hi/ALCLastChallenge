@@ -1,0 +1,7 @@
+#Tue Aug 29 14:58:14 WAT 2017
+base.0=C\:\\Users\\OSAJI GABRIEL\\Desktop\\freecodecampsolution\\ALCLastChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1b3907a30c3de54175f640cb9272731b41f587d3
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\OSAJI GABRIEL\\Desktop\\freecodecampsolution\\ALCLastChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a740ab4e317f98e7df37f3da7bb69ac4443f2df0\\classes.dex
+base.1=C\:\\Users\\OSAJI GABRIEL\\Desktop\\freecodecampsolution\\ALCLastChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a740ab4e317f98e7df37f3da7bb69ac4443f2df0
+file.0=C\:\\Users\\OSAJI GABRIEL\\Desktop\\freecodecampsolution\\ALCLastChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1b3907a30c3de54175f640cb9272731b41f587d3\\classes.dex

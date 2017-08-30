@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gabrieljames85gmail.lastchallenge.ProfileActivity"
+    tools:showIn="@layout/activity_profile"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_perm_identity_black_24dp"
+            android:padding="5dp"
+            android:background="#e5e0e0"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/loginname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            tools:text="Gabriel"
+            android:padding="5dp"
+            android:fontFamily="serif"
+            android:background="#e5e0e0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_language_black_24dp"
+            android:padding="5dp"
+            android:background="#e5e0e0"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/git_url"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            tools:text="github"
+            android:padding="5dp"
+            android:fontFamily="serif"
+            android:background="#e5e0e0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_share_black_24dp"
+            android:padding="13dp"/>
+
+        <ImageButton
+            android:id="@+id/gitConnect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/github_mark_32px" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/gitPic"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/family_grandmother" />
+
+
+</LinearLayout>
